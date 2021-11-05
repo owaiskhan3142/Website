@@ -12,3 +12,4 @@ document.getElementById('kunang4').style.top = "70%";
 
 document.getElementById('kunang5').style.left = "70%";
 document.getElementById('kunang5').style.top = "70%";
+
