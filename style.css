@@ -1,3 +1,32 @@
+/* mubashir -> */
+* {
+  box-sizing:border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  height: 100;
+  padding: 0.2px;
+}
+
+
+.row {
+  display: table;
+}
+
+.hover08 {
+	-webkit-filter: grayscale(85%);
+	filter: grayscale(85%);
+	-webkit-transition: .1s ease-in-out;
+	transition: .0.5s ease-in-out;
+}
+.hover08:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+/* Owais -> */
 input {
     position: fixed;
     opacity: 0;
