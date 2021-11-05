@@ -1,42 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        #slideshow {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #image {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            -webkit-transition: opacity 1.0s linear 0s;
+            transition: opacity 1.0s linear 0s;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <input type="checkbox" id="navcheck" role="button" title="menu">
-        <label for="navcheck" aria-hidden="true" title="menu">
-            <span class="burger">
-                <span class="bar">
-                    <span class="visuallyhidden">Menu</span>
-                </span>
+    <input type="checkbox" id="navcheck" role="button" title="menu">
+    <label for="navcheck" aria-hidden="true" title="menu">
+        <span class="burger">
+            <span class="bar">
+                <span class="visuallyhidden">Menu</span>
             </span>
-        </label>
-        <nav id="menu">
-            <a href="#">Home.</a>
-            <a href="#">Portfolio!</a>
-            <a href="#">Service</a>
-            <a href="#">About</a>
-            <a href="#">Jobs.</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div id="slider">
-            <figure>
-                <img class="section" src="./marco-mons-ROWNIiEV9iM-unsplash.jpg" alts>
-                <img class="section" src="./marco-mons-ROWNIiEV9iM-unsplash.jpg" alt>
-            </figure>
-        </div>
+        </span>
+    </label>
+    <nav id="menu">
+        <a href="#">Home.</a>
+        <a href="#">Portfolio!</a>
+        <a href="#">Service</a>
+        <a href="#">About</a>
+        <a href="#">Jobs.</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="slideshow">
+        <img id="image" />
     </div>
 </body>
 <script>
-    
+    var arrImages = ["./pexels-aleksandar-pasaric-325185.jpg",
+        "./pexels-pixabay-531321.jpg"
+    ];
+
+   
+var i = 1; //We start at the second image, because the first one is loaded already by default
+var image = document.getElementById("image");
+
+function nextImage() {
+  
+  setTimeout(function(){
+    image.style.opacity = 0;},4000);
+  
+  image.src = arrImages[i]; //Change picture
+  image.style.opacity = 100;
+  
+  if (i+1 >= arrImages.length) {
+    i = 0;
+  } else {
+    i++;
+  }
+
+}
+
+function startSlideshow() {
+  image.src=arrImages[0]; //Load first picture by default
+  image.style.opacity = 100;
+  
+  //Change opacity back to 0, 1 second before changing the picture
+  setTimeout(function(){image.style.opacity = 0;},4000);
+  
+  setInterval(function() {
+    nextImage()
+  }, 5000);
+}
+
+startSlideshow();
+
 </script>
+
 </html>
