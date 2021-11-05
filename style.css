@@ -10,7 +10,6 @@
   padding: 0.2px;
 }
 
-
 .row {
   display: table;
 }
@@ -20,6 +19,7 @@
 	filter: grayscale(85%);
 	-webkit-transition: .1s ease-in-out;
 	transition: .0.5s ease-in-out;
+    width: 100%;
 }
 .hover08:hover {
 	-webkit-filter: grayscale(0);
