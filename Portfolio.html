@@ -1,57 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Portfolio</title>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="portfolio.js"></script>
+  <style type="text/css">
+        .carousel-control{
+            padding: 0;
+            height: 0;
+            width: 6%;
+            left: 5px;
+            right: 5px;
+            top: 40%;
+        }
+        .glyphicon {
+            font-size: 70px;
+        }
+        .glyphicon-menu-right {
+            float: right;
+        }
+        body {
+            overflow: hidden;
+            background-color: black;
+        }
+        .container {
+            width: 100vw;
+            padding: 0px;
+        }
+       .column {
+            float: left;
+            width: 33.33vw;
+            height: 100vh;
+        }
+        .center-cropped {
+            object-fit: cover;
+            object-position: center;
+            height: 100vh;
+            width: 33.33vw;
+        }
 
-    <script src="jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-      body{
-        margin: 0 auto;
-      }
-    </style>
-    
+        .row {
+            margin: 0;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                width: 100vw;
+                height: 33.33vh;
+            }
+            .center-cropped {
+                width: 100vw;
+                height: 33.33vh;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .glyphicon {
+                left: 5px;
+                right: 5px;
+            }            
+        }
+
+        .hover08 {
+	-webkit-filter: grayscale(85%);
+	filter: grayscale(85%);
+	-webkit-transition: .1s ease-in-out;
+	transition: .0.5s ease-in-out;
+    width: 100%;
+}
+.hover08:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+         
+      
+  </style>
 </head>
 <body>
-  <!-- <button onclick="slide_Portfolio()">Try it</button> -->
-    
-    <div class="container">
-    
-      <div id="section">
 
+<div class="container">
+
+  <div id="data-list" class="carousel slide" data-interval="false">
+
+    <div class="carousel-inner">
+        <div class="item active">
+
+                <div class="row">
+                    <div class="column">
+                            <img class="center-cropped hover08" src="la.jpg" alt="la">
+                    </div>
+                    <div class="column">
+                            <img class="center-cropped hover08" src="chicago.jpg" alt="chicago">
+                    </div>
+                    <div class="column">
+                            <img class="center-cropped hover08" src="ny.jpg" alt="ny">
+                    </div>
+                </div>
+
+        </div>
+
+      <div class="item">
         <div class="row">
-          <div class="column">
-            <img class="hover08" src="davide-pietralunga-t8Jp49OP9xM-unsplash.jpg" alt="Picture">
-          </div>
-          <div class="column">
-            <img class="hover08" src="photo-1574848296471-28f79a036f79.jfif" alt="Picture">
-          </div>
-          <div class="column">
-            <img class="hover08" src="r-architecture-2gDwlIim3Uw-unsplash.jpg" alt="Picture" style="width:100%">
-          </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="1.jpg" alt="la">
+            </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="2.jpg" alt="chicago">
+            </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="3.jpg" alt="ny">
+            </div>
         </div>
 
       </div>
-      
-      <div id="section">
+    
+      <div class="item">
         <div class="row">
-          <div class="column">
-            <img class="hover08" src="davide-pietralunga-t8Jp49OP9xM-unsplash.jpg" alt="Picture">
-          </div>
-          <div class="column">
-            <img class="hover08" src="photo-1574848296471-28f79a036f79.jfif" alt="Picture">
-          </div>
-          <div class="column">
-            <img src="r-architecture-2gDwlIim3Uw-unsplash.jpg" alt="Picture" style="width:100%" class="hover08">
-          </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="marco-mons-ROWNIiEV9iM-unsplash.jpg" alt="la">
+            </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="2.jpg" alt="chicago">
+            </div>
+            <div class="column">
+                    <img class="center-cropped hover08" src="ny.jpg" alt="ny">
+            </div>
         </div>
-      </div>
 
+      </div>
     </div>
 
+    <a class="left carousel-control" href="#data-list" data-slide="prev" data-wrap="false">
+      <span class="glyphicon glyphicon-menu-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#data-list" data-slide="next" data-wrap="false">
+      <span class="glyphicon glyphicon-menu-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 </body>
-<script src="shashkay.js"></script>
-    <script src="slide_Portfolio.js"></script>
 </html>
-</head>
