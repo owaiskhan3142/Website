@@ -25,10 +25,22 @@ body {
     position: absolute;
 }
 .column {
+    position: relative;
     float: left;
     width: 33.33vw;
     height: 100vh;
 }
+
+.column > img, .overlay-text {
+    position: absolute;
+}
+.overlay-text {
+    top: 80vh;
+    left: 39%;
+    color: white;
+}
+
+
 .center-cropped {
     object-fit: cover;
     object-position: center;
@@ -55,6 +67,13 @@ body {
         width: 100vw;
         height: 33.33vh;
     }
+    .column > img, .overlay-text {
+        position: absolute;
+    }
+    .overlay-text {
+        top: 80%;
+        left: 42vw;
+    }
 }
 @media screen and (max-width: 1000px) {
     .glyphicon {
@@ -65,13 +84,16 @@ body {
 .hover08 {
 	-webkit-filter: grayscale(85%);
 	filter: grayscale(85%);
-	-webkit-transition: .1s ease-in-out;
-	transition: .0.5s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	transition: .0.2s ease-in-out;
     width: 100%;
 }
 .hover08:hover {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
 }
  .carousel-fade .carousel-inner .item {
     opacity: 0;
