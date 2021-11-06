@@ -8,20 +8,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="portfolio.js"></script>
+  <link rel="stylesheet" href="style.css">
   <style type="text/css">
         .carousel-control{
             padding: 0;
             height: 0;
-            width: 6%;
-            left: 5px;
-            right: 5px;
-            top: 40%;
+            width: 0;
+            left: 0;
+            right: 0;
+            top: 45%;
         }
         .glyphicon {
             font-size: 70px;
         }
         .glyphicon-menu-right {
             float: right;
+        }
+        .glyphicon-menu-left {
+          float: left;
         }
         body {
             overflow: hidden;
@@ -30,6 +34,7 @@
         .container {
             width: 100vw;
             padding: 0px;
+            position: absolute;
         }
        .column {
             float: left;
@@ -52,6 +57,9 @@
             clear: both;
             display: table;
         }
+        .nav_menu {
+          position: relative;
+        }
 
         @media screen and (max-width: 800px) {
             .column {
@@ -68,30 +76,34 @@
                 left: 5px;
                 right: 5px;
             }            
-        }
-
-        .hover08 {
-	-webkit-filter: grayscale(85%);
-	filter: grayscale(85%);
-	-webkit-transition: .1s ease-in-out;
-	transition: .0.5s ease-in-out;
-    width: 100%;
-}
-.hover08:hover {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-}
-         
-      
-  </style>
+        } 
+    </style>
 </head>
 <body>
-
+  <div class="nav_menu">
+    <input type="checkbox" id="navcheck" role="button" title="menu">
+    <label for="navcheck" aria-hidden="true" title="menu">
+        <span class="burger">
+            <span class="bar">
+                <span class="visuallyhidden">Menu</span>
+            </span>
+        </span>
+    </label>
+    <nav id="menu">
+        <a href="./home.html">Home.</a>
+        <a href="#">Portfolio</a>
+        <a href="./Services.html">Service</a>
+        <a href="#">About</a>
+        <a href="#">Jobs.</a>
+        <a href="#">Contact</a>
+    </nav>
+  </div>
 <div class="container">
 
   <div id="data-list" class="carousel slide" data-interval="false">
 
     <div class="carousel-inner">
+      
         <div class="item active">
 
                 <div class="row">
