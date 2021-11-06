@@ -1,0 +1,98 @@
+.carousel-control{
+    padding: 0;
+    height: 0;
+    width: 0;
+    left: 0;
+    right: 0;
+    top: 45%;
+}
+.glyphicon {
+    font-size: 70px;
+}
+.glyphicon-menu-right {
+    float: right;
+}
+.glyphicon-menu-left {
+  float: left;
+}
+body {
+    overflow: hidden;
+    background-color: black;
+}
+.container {
+    width: 100vw;
+    padding: 0px;
+    position: absolute;
+}
+.column {
+    float: left;
+    width: 33.33vw;
+    height: 100vh;
+}
+.center-cropped {
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+    width: 33.33vw;
+}
+
+.row {
+    margin: 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100vw;
+        height: 33.33vh;
+    }
+    .center-cropped {
+        width: 100vw;
+        height: 33.33vh;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .glyphicon {
+        left: 5px;
+        right: 5px;
+    }            
+}
+.hover08 {
+	-webkit-filter: grayscale(85%);
+	filter: grayscale(85%);
+	-webkit-transition: .1s ease-in-out;
+	transition: .0.5s ease-in-out;
+    width: 100%;
+}
+.hover08:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+ .carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .carousel-fade .carousel-inner .active {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-control {
+    z-index: 2;
+  }
