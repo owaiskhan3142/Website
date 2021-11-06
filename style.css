@@ -1,4 +1,4 @@
-/* Owais -> */
+/*
 input {
     position: fixed;
     opacity: 0;
@@ -220,43 +220,6 @@ h1 {
     margin-left: 45%;
     position: absolute;
 }
-
-
-/* @keyframes slidy {
-    0% {
-        left: -100%;
-    }
-
-    25% {
-        left: -100%;
-    }
-    50% {
-        left: 100%
-    }
-    
-}
-div#slider {
-    overflow: hidden;
-}
-
-div#slider figure img {
-    width: 20%;
-    float: left;
-}
-figure img{
-    border: 1px solid white;
-}
-
-div#slider figure {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    text-align: left;
-    font-size: 0;
-    animation: s slidy infinite;
-} */
-
 @keyframes slidy {
     0% { left: 0%; }
     40% { left: 0%; }
@@ -276,4 +239,4 @@ div#slider figure {
       text-align: left;
       font-size: 0;
       animation: 5s slidy infinite;
-    }
+    }*/
