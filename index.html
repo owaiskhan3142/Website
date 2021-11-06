@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="nav_style.css">
+    <script src="nav_js.js"></script>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        #slideshow {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #image {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            -webkit-transition: opacity 1.0s linear 0s;
+            transition: opacity 1.0s linear 0s;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="menu">
+    <a href="#" class="menu-link">
+        <span class="hamburger-icon">
+        <span class="hamburger-bar hamburger-bar-1"></span>
+        <span class="hamburger-bar hamburger-bar-2"></span>
+        <span class="hamburger-bar hamburger-bar-3"></span>
+        </span>
+    </a>
+    </div>
+
+    <div class="menu-overlay">
+    <nav class="overlay-menu">
+        <ul class="one">
+        <li><a class="nav-links" href="./home.html">Home</a></li>
+        <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
+        <li><a class="nav-links" href="./services.html">Service</a></li>
+        <li><a class="nav-links" href="./about_us.html">About</a></li>
+        <li><a class="nav-links" href="./jobs.html">Jobs</a></li>
+        <li><a class="nav-links" href="./contact_us.html">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div id="slideshow">
+        <img id="image" />
+    </div>
+</body>
+<script>
+    var arrImages = ["/images/image (1).png",
+        "/images/image.png"
+    ];
+
+
+    var i = 1; //We start at the second image, because the first one is loaded already by default
+    var image = document.getElementById("image");
+
+    function nextImage() {
+
+        setTimeout(function () {
+            image.style.opacity = 0;
+        }, 4000);
+
+        image.src = arrImages[i]; //Change picture
+        image.style.opacity = 100;
+
+        if (i + 1 >= arrImages.length) {
+            i = 0;
+        } else {
+            i++;
+        }
+
+    }
+
+    function startSlideshow() {
+        image.src = arrImages[0]; //Load first picture by default
+        image.style.opacity = 100;
+
+        //Change opacity back to 0, 1 second before changing the picture
+        setTimeout(function () { image.style.opacity = 0; }, 4000);
+
+        setInterval(function () {
+            nextImage()
+        }, 5000);
+    }
+
+    startSlideshow();
+
+</script>
+
+</html>
