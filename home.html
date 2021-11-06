@@ -55,39 +55,40 @@
         "./pexels-pixabay-531321.jpg"
     ];
 
-   
-var i = 1; //We start at the second image, because the first one is loaded already by default
-var image = document.getElementById("image");
 
-function nextImage() {
-  
-  setTimeout(function(){
-    image.style.opacity = 0;},4000);
-  
-  image.src = arrImages[i]; //Change picture
-  image.style.opacity = 100;
-  
-  if (i+1 >= arrImages.length) {
-    i = 0;
-  } else {
-    i++;
-  }
+    var i = 1; //We start at the second image, because the first one is loaded already by default
+    var image = document.getElementById("image");
 
-}
+    function nextImage() {
 
-function startSlideshow() {
-  image.src=arrImages[0]; //Load first picture by default
-  image.style.opacity = 100;
-  
-  //Change opacity back to 0, 1 second before changing the picture
-  setTimeout(function(){image.style.opacity = 0;},4000);
-  
-  setInterval(function() {
-    nextImage()
-  }, 5000);
-}
+        setTimeout(function () {
+            image.style.opacity = 0;
+        }, 4000);
 
-startSlideshow();
+        image.src = arrImages[i]; //Change picture
+        image.style.opacity = 100;
+
+        if (i + 1 >= arrImages.length) {
+            i = 0;
+        } else {
+            i++;
+        }
+
+    }
+
+    function startSlideshow() {
+        image.src = arrImages[0]; //Load first picture by default
+        image.style.opacity = 100;
+
+        //Change opacity back to 0, 1 second before changing the picture
+        setTimeout(function () { image.style.opacity = 0; }, 4000);
+
+        setInterval(function () {
+            nextImage()
+        }, 5000);
+    }
+
+    startSlideshow();
 
 </script>
 

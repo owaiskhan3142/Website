@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Portfolio</title>
   <meta charset="utf-8">
@@ -10,75 +11,86 @@
   <script src="portfolio.js"></script>
   <link rel="stylesheet" href="style.css">
   <style type="text/css">
-        .carousel-control{
-            padding: 0;
-            height: 0;
-            width: 0;
-            left: 0;
-            right: 0;
-            top: 45%;
-        }
-        .glyphicon {
-            font-size: 70px;
-        }
-        .glyphicon-menu-right {
-            float: right;
-        }
-        .glyphicon-menu-left {
-          float: left;
-        }
-        body {
-            overflow: hidden;
-            background-color: black;
-        }
-        .container {
-            width: 100vw;
-            padding: 0px;
-            position: absolute;
-        }
-       .column {
-            float: left;
-            width: 33.33vw;
-            height: 100vh;
-        }
-        .center-cropped {
-            object-fit: cover;
-            object-position: center;
-            height: 100vh;
-            width: 33.33vw;
-        }
+    .carousel-control {
+      padding: 0;
+      height: 0;
+      width: 0;
+      left: 0;
+      right: 0;
+      top: 45%;
+    }
 
-        .row {
-            margin: 0;
-        }
+    .glyphicon {
+      font-size: 70px;
+    }
 
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        .nav_menu {
-          position: relative;
-        }
+    .glyphicon-menu-right {
+      float: right;
+    }
 
-        @media screen and (max-width: 800px) {
-            .column {
-                width: 100vw;
-                height: 33.33vh;
-            }
-            .center-cropped {
-                width: 100vw;
-                height: 33.33vh;
-            }
-        }
-        @media screen and (max-width: 1000px) {
-            .glyphicon {
-                left: 5px;
-                right: 5px;
-            }            
-        } 
-    </style>
+    .glyphicon-menu-left {
+      float: left;
+    }
+
+    body {
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .container {
+      width: 100vw;
+      padding: 0px;
+      position: absolute;
+    }
+
+    .column {
+      float: left;
+      width: 33.33vw;
+      height: 100vh;
+    }
+
+    .center-cropped {
+      object-fit: cover;
+      object-position: center;
+      height: 100vh;
+      width: 33.33vw;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .nav_menu {
+      font-size: larger;
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        width: 100vw;
+        height: 33.33vh;
+      }
+
+      .center-cropped {
+        width: 100vw;
+        height: 33.33vh;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .glyphicon {
+        left: 5px;
+        right: 5px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="nav_menu">
     <input type="checkbox" id="navcheck" role="button" title="menu">
@@ -90,77 +102,78 @@
         </span>
     </label>
     <nav id="menu">
-      <a href="./home.html">Home.</a>
-      <a href="./Portfolio.html">Portfolio</a>
-      <a href="./Services.html">Service</a>
-      <a href="./about_us.html">About</a>
-      <a href="jobs.html">Jobs.</a>
-      <a href="contact_us.html">Contact</a>
-  </nav>
+        <a href="./home.html">Home.</a>
+        <a href="./Portfolio.html">Portfolio</a>
+        <a href="./Services.html">Service</a>
+        <a href="./about_us.html">About</a>
+        <a href="jobs.html">Jobs.</a>
+        <a href="contact_us.html">Contact</a>
+    </nav>
   </div>
-<div class="container">
+  <div class="container">
 
-  <div id="data-list" class="carousel slide" data-interval="false">
+    <div id="data-list" class="carousel slide" data-interval="false">
 
-    <div class="carousel-inner">
-      
+      <div class="carousel-inner">
+
         <div class="item active">
 
-                <div class="row">
-                    <div class="column">
-                            <img class="center-cropped hover08" src="la.jpg" alt="la">
-                    </div>
-                    <div class="column">
-                            <img class="center-cropped hover08" src="chicago.jpg" alt="chicago">
-                    </div>
-                    <div class="column">
-                            <img class="center-cropped hover08" src="ny.jpg" alt="ny">
-                    </div>
-                </div>
+          <div class="row">
+            <div class="column">
+              <img class="center-cropped hover08" src="la.jpg" alt="la">
+            </div>
+            <div class="column">
+              <img class="center-cropped hover08" src="chicago.jpg" alt="chicago">
+            </div>
+            <div class="column">
+              <img class="center-cropped hover08" src="ny.jpg" alt="ny">
+            </div>
+          </div>
 
         </div>
 
-      <div class="item">
-        <div class="row">
+        <div class="item">
+          <div class="row">
             <div class="column">
-                    <img class="center-cropped hover08" src="1.jpg" alt="la">
+              <img class="center-cropped hover08" src="1.jpg" alt="la">
             </div>
             <div class="column">
-                    <img class="center-cropped hover08" src="2.jpg" alt="chicago">
+              <img class="center-cropped hover08" src="2.jpg" alt="chicago">
             </div>
             <div class="column">
-                    <img class="center-cropped hover08" src="3.jpg" alt="ny">
+              <img class="center-cropped hover08" src="3.jpg" alt="ny">
             </div>
+          </div>
+
         </div>
 
+        <div class="item">
+          <div class="row">
+            <div class="column">
+              <img class="center-cropped hover08" src="marco-mons-ROWNIiEV9iM-unsplash.jpg" alt="la">
+            </div>
+            <div class="column">
+              <img class="center-cropped hover08" src="2.jpg" alt="chicago">
+            </div>
+            <div class="column">
+              <img class="center-cropped hover08" src="ny.jpg" alt="ny">
+            </div>
+          </div>
+
+        </div>
       </div>
-    
-      <div class="item">
-        <div class="row">
-            <div class="column">
-                    <img class="center-cropped hover08" src="marco-mons-ROWNIiEV9iM-unsplash.jpg" alt="la">
-            </div>
-            <div class="column">
-                    <img class="center-cropped hover08" src="2.jpg" alt="chicago">
-            </div>
-            <div class="column">
-                    <img class="center-cropped hover08" src="ny.jpg" alt="ny">
-            </div>
-        </div>
 
-      </div>
+      <a class="left carousel-control" href="#data-list" data-slide="prev" data-wrap="false">
+        <span class="glyphicon glyphicon-menu-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#data-list" data-slide="next" data-wrap="false">
+        <span class="glyphicon glyphicon-menu-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-
-    <a class="left carousel-control" href="#data-list" data-slide="prev" data-wrap="false">
-      <span class="glyphicon glyphicon-menu-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#data-list" data-slide="next" data-wrap="false">
-      <span class="glyphicon glyphicon-menu-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-</div>
 
 </body>
+
 </html>
