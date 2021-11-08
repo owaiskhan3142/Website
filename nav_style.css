@@ -57,7 +57,7 @@
   }
   
   .menu-overlay {
-    background-color: #444;
+    background-color: rgb(8, 10, 14);
     color: white;
     height: 100vh;
     width: 100vw;
